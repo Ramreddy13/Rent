@@ -1,0 +1,42 @@
+POST http://localhost:5000/buyer/register
+Content-Type: application/json
+
+{
+"firstName": "Ram Reddy",
+"email": "vennamlaxman0413@gmail.com",
+"lastName": "Vennam",
+"password": "ram21"
+}
+
+###
+POST http://localhost:5000/buyer/login
+Content-Type: application/json
+
+{
+"email": "vennamlaxman0413@gmail.com",
+"password": "ram21"
+}
+
+###
+GET http://localhost:5000/buyer/profile
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InZlbm5hbWxheG1hbjA0MTNAZ21haWwuY29tIiwiaWF0IjoxNzE3MTczNzA3LCJleHAiOjE3MTcxNzczMDd9.fIvDC8x9-nids8XNF9oqtzbOahJqhWGKwZSqzugzGLM
+
+###
+POST http://localhost:5000/seller/register
+Content-Type: application/json
+
+{
+"firstName": "Ram Reddy",
+"email": "vennamRohitha0413@gmail.com",
+"lastName": "Vennam",
+"password": "ram21"
+}
+
+###
+POST http://localhost:5000/seller/login
+Content-Type: application/json
+
+{
+"email": "vennamRohitha0413@gmail.com",
+"password": "ram21"
+}
