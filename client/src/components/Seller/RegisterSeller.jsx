@@ -8,12 +8,16 @@ function RegisterSeller() {
   const onSubmit =(userObj) => {
     axios.post("http://localhost:5000/seller/register",userObj)
     .then((res)=>{
-      console.log(res.message);
+      console.log(res.data.message);
       if(res.status===200){
         navigate("/seller/login");
       }
+      else if(res.status===201){
+        alert(res.data.message);
+        navigate("/seller/login");
+      }
       else{
-        alert(res.message);
+        alert(res.data.message);
       }
     })
     console.log(userObj);

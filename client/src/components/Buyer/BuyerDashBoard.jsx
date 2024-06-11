@@ -8,6 +8,7 @@ function BuyerDashBoard() {
     <div>
       <button type="button" onClick={()=>{navigate('/buyer/profile')}}>Profile</button>
       
+      
     </div>
   )
 }

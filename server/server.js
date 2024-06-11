@@ -12,8 +12,12 @@ mclient.connect('mongodb://127.0.0.1:27017/27017')
     let dbobj=dbref.db('rent')
     let seller=dbobj.collection("seller")
     let buyer=dbobj.collection("buyer")
+    let houses = dbobj.collection('houses');
+
     app.set("seller",seller)
     app.set("buyer",buyer)
+    app.set('houses', houses);
+
     console.log("succes")
 })
 .catch(err=>console.log("dberr",err))

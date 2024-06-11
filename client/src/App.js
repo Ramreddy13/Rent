@@ -13,6 +13,9 @@ import RegisterSeller from './components/Seller/RegisterSeller';
 import SellerDashBoard from './components/Seller/SellerDashBoard';
 import BuyerDashBoard from './components/Buyer/BuyerDashBoard';
 import BuyerProfile from './components/Buyer/BuyerProfile';
+import SellerProfile from './components/Seller/SellerProfile';
+import PostRent from './components/Seller/PostRent';
+import PostedRent from './components/Seller/PostedRent';
 
 const router=createBrowserRouter([
   {
@@ -66,6 +69,18 @@ const router=createBrowserRouter([
           {
             path:'/seller/dashboard',
             element:<SellerDashBoard/>
+          },
+          {
+            path:'/seller/profile',
+            element:<SellerProfile/>
+          },
+          {
+            path:'/seller/postRent',
+            element:<PostRent/>
+          },
+          {
+            path:'/seller/postedRent',
+            element:<PostedRent/>
           }
         ]
       }

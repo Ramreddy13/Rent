@@ -29,7 +29,7 @@ buyer.post('/login',async(req,res)=>{
    }else{
         let ispass=await bcrypt.compare(userObj.password,user.password)
        if(ispass){
-        let token=jwt.sign({email:user.email},process.env.JWT_SECRET,{expiresIn:"3600000"})
+        let token=jwt.sign({email:user.email},process.env.JWT_SECRET,{expiresIn:"360000000"})
         res.status(200).send({message:"User Logined Successfully!",token:token,payload:user})
         }
         else{

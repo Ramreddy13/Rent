@@ -6,12 +6,15 @@ function LoginBuyer() {
   const {register, handleSubmit} = useForm();
   const [currentUser,error,loginStatus,Login,LogOut]=useContext(LoginContext)
   const formSubmit=(userObj)=>{
+    if(error.length>0) {
+      alert(error)
+    }
     Login(userObj)
   }
   return (
     <div>
       <h1>Buyer Login</h1>
-      {error.length!==0 && <p>{error}</p>}
+      
       <form onSubmit={handleSubmit(formSubmit)}>
       <div>
         <label htmlFor="email">Email :</label>
