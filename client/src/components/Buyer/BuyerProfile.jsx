@@ -25,7 +25,7 @@ function BuyerProfile() {
     else{
         navigate('/buyer/login');
     }
-    },[])
+    },[navigate])
   return (
     <div>
         <h1>Buyer Profile</h1>

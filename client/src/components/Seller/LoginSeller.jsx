@@ -1,24 +1,16 @@
-import React from 'react'
-import axios from 'axios';
+import React,{useContext} from 'react'
 import {useForm} from 'react-hook-form'; 
-import {useNavigate} from 'react-router-dom' 
-function LoginSeller() {
-  const navigate=useNavigate();
-  const {register, handleSubmit} = useForm();
-  const formSubmit=(userObj)=>{
-    axios.post("http://localhost:5000/seller/login",userObj)
-    .then(res=>{
-      console.log(res.message);
-      if(res.status===200){
-        navigate("/seller/dashboard");
-      }
-      else{
-        alert(res.message);
-      }
-    })
-    console.log(userObj);
-    
+import { LoginContext } from './SellerLoginContext/LoginContext';
 
+function LoginSeller() {
+  const [currentUser,error,loginStatus,Login,LogOut]=useContext(LoginContext)
+  const {register, handleSubmit} = useForm();
+  
+  const formSubmit=(userObj)=>{
+    if(error.length>0) {
+      alert(error)
+    }
+    Login(userObj)
   }
   return (
     <div><h1>Seller Login</h1>
