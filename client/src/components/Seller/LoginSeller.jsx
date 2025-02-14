@@ -13,20 +13,26 @@ function LoginSeller() {
     Login(userObj)
   }
   return (
-    <div><h1>Seller Login</h1>
-    <form onSubmit={handleSubmit(formSubmit)}>
-    <div>
-      <label htmlFor="email">Email :</label>
-      <input type="email" id="email" {...register("email", {required: true})} />
+    <div className="login-container">
+      <div className="login-card">
+        <h1 className="login-title">Seller Login</h1>
+
+        <form onSubmit={handleSubmit(formSubmit)} className="login-form">
+          <div className="input-group">
+            <label htmlFor="email">Email :</label>
+            <input type="email" id="email" {...register("email", { required: true })} />
+          </div>
+
+          <div className="input-group">
+            <label htmlFor="password">Password :</label>
+            <input type="password" id="password" {...register("password", { required: true })} />
+          </div>
+
+          <div className="button-group">
+            <button type="submit" className="login-button">Login</button>
+          </div>
+        </form>
       </div>
-      <div>
-      <label htmlFor="password">Password :</label>
-      <input type="password" id="password" {...register("password", {required: true})} />
-      </div>
-      <div>
-        <button type="submit">Login</button>
-      </div>
-    </form>
     </div>
   )
 }

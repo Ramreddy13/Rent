@@ -1,0 +1,48 @@
+/* Center the profile page */
+.profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: white;
+    color: white;
+    text-align: center;
+  }
+  
+  /* Profile Card */
+  .profile-card {
+    background: #725348;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 90%;
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  /* Hover Effect */
+  .profile-card:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Profile Title */
+  .profile-title {
+    font-size: 26px;
+    margin-bottom: 10px;
+  }
+  
+  /* Profile Name */
+  .profile-name {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  /* Profile Email */
+  .profile-email {
+    font-size: 18px;
+    font-weight: lighter;
+    opacity: 0.9;
+  }
+  

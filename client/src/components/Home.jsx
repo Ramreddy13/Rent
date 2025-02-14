@@ -8,18 +8,18 @@ function Home() {
   return (
     <div>
       {/* Navigation Bar */}
-      <nav className="navbar">
-        <div className="navbar-logo">
+      <nav className="navbar1">
+        <div className="navbar1-logo">
           <h1>RentNest</h1>
         </div>
-        <div className="navbar-links">
-          <button onClick={() => navigate('/about')}>About Us</button>
-          <button onClick={() => navigate('/contact')}>Contact Us</button>
+        <div className="navbar1-links">
+          <button onClick={() => navigate('/aboutus')}>About Us</button>
+          <button onClick={() => navigate('/contactus')}>Contact Us</button>
         </div>
       </nav>
 
       {/* Buyer Container */}
-      <div className="home-container">
+      <div className="home-container1">
         <div className="card left-card">
           <div className="left-section">
             <h1>For Tenants</h1>

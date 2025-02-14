@@ -1,0 +1,82 @@
+.rents-container {
+    display: block;
+    justify-items: center;
+    min-height: 100vh;
+    background: #725348;
+    padding-top: 20px;
+    margin: 0;
+}
+
+/* Title */
+.rents-title {
+    text-align: center;
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 20px;
+}
+
+/* House List */
+.houses-list {
+    display: block;
+    justify-items: center;
+    width: 100%;
+    list-style: none;
+}
+
+/* Individual House Item */
+.house-item {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px 70px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+    margin-bottom: 20px;
+}
+
+.house-item:hover {
+    transform: scale(1.05);
+}
+
+.house-item p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+/* View Seller Details Button */
+.details-button {
+    display: inline-block;
+    background-color: #725348;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.details-button:hover {
+    background-color: #725348;
+    transform: scale(1.05);
+}
+
+/* Pagination */
+.pagination {
+    margin-top: 20px;
+}
+
+.page-button {
+    background: #725348;
+    color: white;
+    border: 1px solid #fffefe;
+    padding: 8px 12px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: all 0.3s ease-in-out;
+}
+
+.page-button:hover {
+    background: #b78876;
+    color: white;
+}

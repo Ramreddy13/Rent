@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
+import '../Buyer/BuyerProfile.css'
 function SellerProfile() {
     let [user,setUser]=useState({});
     const navigate=useNavigate();
@@ -29,10 +30,14 @@ function SellerProfile() {
     }
     },[navigate])
   return (
-    <div>
-        <h1>seller Profile</h1>
-        <h2>{user.firstName} {user.lastNName}</h2>
-        <h2>{user.email}</h2>
+    <div className="profile-container">
+      <div className="profile-card">
+        <h1 className="profile-title">Seller Profile</h1>
+        <h2 className="profile-name">
+          {user?.firstName} {user?.lastName}
+        </h2>
+        <h3 className="profile-email">{user?.email}</h3>
+      </div>
     </div>
   )
 }

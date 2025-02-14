@@ -16,6 +16,8 @@ import BuyerProfile from './components/Buyer/BuyerProfile';
 import SellerProfile from './components/Seller/SellerProfile';
 import PostRent from './components/Seller/PostRent';
 import PostedRent from './components/Seller/PostedRent';
+import AboutUs from './components/AboutUs';
+import ContactUs from './components/ContactUs';
 
 const router=createBrowserRouter([
   {
@@ -83,7 +85,16 @@ const router=createBrowserRouter([
             element:<PostedRent/>
           }
         ]
+      },
+      {
+        path:"/aboutus",
+        element:<AboutUs/>
+      },
+      {
+        path:"/contactus",
+        element:<ContactUs/>
       }
+
     ]
   }
 ])

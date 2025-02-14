@@ -6,7 +6,7 @@ const mclient=require("mongodb").MongoClient
 app.use(express.json());
 app.use(cors());
 
-mclient.connect('mongodb://127.0.0.1:27017/27017')
+mclient.connect('mongodb://localhost:27017/')
 .then(dbref=>{
     //get database obj
     let dbobj=dbref.db('rent')
