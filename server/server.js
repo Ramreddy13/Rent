@@ -5,7 +5,7 @@ const mclient=require("mongodb").MongoClient
 app.use(express.json());
 app.use(cors(
     {
-        origin:["http://localhost:3000","http://RentNest"],
+        origin:["https://rent-ruddy.vercel.app"],
         methods:["GET","POST","DELETE"],
         credentials:true
     }
