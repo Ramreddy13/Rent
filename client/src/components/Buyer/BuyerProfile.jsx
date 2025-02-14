@@ -12,7 +12,7 @@ function BuyerProfile() {
 
     if (token) {
       axios
-        .get('http://localhost:5000/buyer/profile', {
+        .get('https://rentnest-server-api.onrender.com/buyer/profile', {
           headers: { Authorization: `Bearer ${token}` },
         })
         .then((res) => {

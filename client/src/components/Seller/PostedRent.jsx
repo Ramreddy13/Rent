@@ -6,7 +6,7 @@ function PostedRent() {
   const [houses, sethouses] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:5000/seller/postedRent', {
+    axios.get('https://rentnest-server-api.onrender.com/seller/postedRent', {
       headers: {
         'Authorization': `Bearer ${localStorage.getItem('token')}`
       }
@@ -21,7 +21,7 @@ function PostedRent() {
   }, []);
 
   const deleteHouse = (id) => {
-    axios.delete(`http://localhost:5000/seller/deleteHouse/${id}`, {
+    axios.delete(`https://rentnest-server-api.onrender.com/seller/deleteHouse/${id}`, {
       headers: {
         'Authorization': `Bearer ${localStorage.getItem('token')}`
       }

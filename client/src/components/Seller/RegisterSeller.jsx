@@ -7,7 +7,7 @@ function RegisterSeller() {
   const navigate=useNavigate();
   const {register, handleSubmit} = useForm();
   const onSubmit =(userObj) => {
-    axios.post("http://localhost:5000/seller/register",userObj)
+    axios.post("https://rentnest-server-api.onrender.com/seller/register",userObj)
     .then((res)=>{
       console.log(res.data.message);
       if(res.status===200){

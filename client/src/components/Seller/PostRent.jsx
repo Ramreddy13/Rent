@@ -8,7 +8,7 @@ function PostRent() {
     const navigate = useNavigate();
     const { register, handleSubmit } = useForm();
     const onSubmit = async (data) => {
-        axios.post("http://localhost:5000/seller/postRent", data, {
+        axios.post("https://rentnest-server-api.onrender.com/seller/postRent", data, {
             headers: {
                 'Authorization': `Bearer ${localStorage.getItem('token')}`
             }

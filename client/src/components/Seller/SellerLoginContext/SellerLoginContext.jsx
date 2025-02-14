@@ -9,7 +9,7 @@ function SellerLoginContext({children}) {
     let navigate=useNavigate();
     const Login=(userObj)=>{
       console.log(userObj)
-        axios.post("http://localhost:5000/seller/login",userObj)
+        axios.post("https://rentnest-server-api.onrender.com/seller/login",userObj)
         .then(res=>{
         if(res.status===200){
             setCurrentUser({...res.data.payload});

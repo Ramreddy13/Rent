@@ -10,7 +10,7 @@ function RegisterBuyer() {
 
   const formSubmit = (userObj) => {
     axios
-      .post("http://localhost:5000/buyer/register", userObj)
+      .post("https://rentnest-server-api.onrender.com/buyer/register", userObj)
       .then((res) => {
         console.log(res.data.message);
         if (res.status === 200) {

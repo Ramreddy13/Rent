@@ -9,7 +9,7 @@ function Rents() {
     const [housesPerPage] = useState(8);
 
     useEffect(() => {
-        axios.get('http://localhost:5000/buyer/rents', {
+        axios.get('https://rentnest-server-api.onrender.com/buyer/rents', {
             headers: { 'Authorization': `Bearer ${localStorage.getItem('token')}` }
         })
         .then((res) => {
@@ -20,7 +20,7 @@ function Rents() {
     }, []);
 
     function fetchSellerDetails(id) {
-        axios.get(`http://localhost:5000/buyer/sellerDetails/${id}`, {
+        axios.get(`https://rentnest-server-api.onrender.com/buyer/sellerDetails/${id}`, {
             headers: { 'Authorization': `Bearer ${localStorage.getItem('token')}` }
         })
         .then((res) => {

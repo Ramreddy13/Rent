@@ -8,7 +8,7 @@ function SellerProfile() {
     useEffect(() => {
     const token =localStorage.getItem("token")
     if(token!==undefined){
-        axios.get('http://localhost:5000/seller/profile',{
+        axios.get('https://rentnest-server-api.onrender.com/seller/profile',{
             headers: {Authorization:`Bearer ${token}`}
         })
         .then((res)=>{
