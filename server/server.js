@@ -1,15 +1,10 @@
 const express=require('express');
 const cors = require('cors');
 const app=express();
+const path = require('path');
 const mclient=require("mongodb").MongoClient
 app.use(express.json());
-app.use(cors(
-    {
-        origin:["https://rent-ruddy.vercel.app"],
-        methods:["GET","POST","DELETE"],
-        credentials:true
-    }
-));
+app.use(cors());
 
 mclient.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
 .then(dbref=>{
@@ -26,6 +21,7 @@ mclient.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopolo
     console.log("succes")
 })
 .catch(err=>console.log("dberr",err))
+app.use(express.static(path.join(__dirname, '../client/build')));
 // forwording routes
 const buyer=require("./routes/buyerRoute")
 app.use('/buyer',buyer)
