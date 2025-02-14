@@ -15,7 +15,7 @@ function PostRent() {
         })
         .then((res) => {
             alert(res.data.message);
-            navigate("/seller/dashboard");
+            navigate("/seller-page/dashboard");
         })
         .catch((err) => {
             console.log(err);

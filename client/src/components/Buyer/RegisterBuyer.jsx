@@ -14,7 +14,7 @@ function RegisterBuyer() {
       .then((res) => {
         console.log(res.data.message);
         if (res.status === 200) {
-          navigate("/buyer/login");
+          navigate("/buyer-page/login");
         } else {
           alert(res.data.message);
         }

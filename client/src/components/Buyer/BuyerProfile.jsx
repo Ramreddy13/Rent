@@ -20,15 +20,15 @@ function BuyerProfile() {
             setUser(res.data.payload);
           } else {
             alert(res.data.message);
-            navigate('/buyer/login');
+            navigate('/buyer-page/login');
           }
         })
         .catch((err) => {
           console.error(err);
-          navigate('/buyer/login');
+          navigate('/buyer-page/login');
         });
     } else {
-      navigate('/buyer/login');
+      navigate('/buyer-page/login');
     }
   }, [navigate]);
 

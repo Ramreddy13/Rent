@@ -13,7 +13,7 @@ function BuyerDashBoard() {
         <div className="navbar-logo">
           <h1>RentNest</h1>
         </div>
-        <button className="profile-button" type="button" onClick={() => navigate('/buyer/profile')}>
+        <button className="profile-button" type="button" onClick={() => navigate('/buyer-page/profile')}>
           Profile
         </button>
       </nav>

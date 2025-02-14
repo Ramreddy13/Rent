@@ -18,7 +18,7 @@ function SellerProfile() {
             }
             else{
                 alert(res.data.message)
-                navigate('/seller/login')
+                navigate('/seller-page/login')
             }
         })
         .catch((err)=>{
@@ -26,7 +26,7 @@ function SellerProfile() {
         })
     }
     else{
-        navigate('/seller/login');
+        navigate('/seller-page/login');
     }
     },[navigate])
   return (

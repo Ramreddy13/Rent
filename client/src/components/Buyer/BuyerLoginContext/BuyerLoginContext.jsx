@@ -15,7 +15,7 @@ function BuyerLoginContext({children}) {
             setCurrentUser({...res.data.payload});
             setLoginStatus(true);
             localStorage.setItem("token",res.data.token);
-            navigate("/buyer/dashboard");
+            navigate("/buyer-page/dashboard");
         }
         else{
             setError(res.data.message)

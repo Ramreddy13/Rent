@@ -11,11 +11,11 @@ function RegisterSeller() {
     .then((res)=>{
       console.log(res.data.message);
       if(res.status===200){
-        navigate("/seller/login");
+        navigate("/seller-page/login");
       }
       else if(res.status===201){
         alert(res.data.message);
-        navigate("/seller/login");
+        navigate("/seller-page/login");
       }
       else{
         alert(res.data.message);

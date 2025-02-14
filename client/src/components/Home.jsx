@@ -24,7 +24,7 @@ function Home() {
           <div className="left-section">
             <h1>For Tenants</h1>
             <p>Find your next home from trusted landlords. Explore rental listings and get the best offers.</p>
-            <button onClick={() => { navigate('/buyer') }} className="home-button">Tenant</button>
+            <button onClick={() => { navigate('/buyer-page') }} className="home-button">Tenant</button>
           </div>
         </div>
         {/* Seller Container */}
@@ -32,7 +32,7 @@ function Home() {
           <div className="right-section">
             <h1>For Landlords</h1>
             <p>Manage your properties, connect with tenants, and find the right people for your rentals.</p>
-            <button onClick={() => { navigate('/seller') }} className="home-button">Landlord</button>
+            <button onClick={() => { navigate('/seller-page') }} className="home-button">Landlord</button>
           </div>
         </div>
       </div>

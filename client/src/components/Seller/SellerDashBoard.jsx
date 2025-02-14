@@ -11,7 +11,7 @@ function SellerDashBoard() {
                 <div className="navbar-logo">
                     <h1>Seller Dashboard</h1>
                 </div>
-                <button className="profile-button" onClick={() => navigate('/seller/profile')}>
+                <button className="profile-button" onClick={() => navigate('/seller-page/profile')}>
                     Profile
                 </button>
             </div>
@@ -21,13 +21,13 @@ function SellerDashBoard() {
                 </div>
                 <div className="card">
                     <h2>Post New Rent</h2>
-                    <button className="card-button" onClick={() => navigate('/seller/postRent')}>
+                    <button className="card-button" onClick={() => navigate('/seller-page/postRent')}>
                         Post New Rent
                     </button>
                 </div>
                 <div className="card">
                     <h2>Posted Rent</h2>
-                    <button className="card-button" onClick={() => navigate('/seller/postedRent')}>
+                    <button className="card-button" onClick={() => navigate('/seller-page/postedRent')}>
                         View Posted Rent
                     </button>
                 </div>

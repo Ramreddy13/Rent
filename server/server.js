@@ -32,6 +32,9 @@ app.use('/buyer',buyer)
 const seller=require("./routes/sellerRoute")
 app.use('/seller',seller)
 
+app.use('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '../client/build/index.html'));
+});
 app.listen(process.env.PORT,()=>{
     console.log("server started")
 });

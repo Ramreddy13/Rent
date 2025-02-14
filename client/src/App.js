@@ -28,60 +28,60 @@ const router=createBrowserRouter([
         path:'/',
         element:<Home/>
       },{
-        path:'/buyer',
+        path:'/buyer-page',
         element:<BuyerRootLayout/>,
         children:[
           {
-            path:'/buyer',
+            path:'/buyer-page',
             element:<BuyerHome/>
           },
           {
-            path:'/buyer/login',
+            path:'/buyer-page/login',
             element:<LoginBuyer />
           },
           {
-            path:'/buyer/register',
+            path:'/buyer-page/register',
             element:<RegisterBuyer />
           },
           {
-            path:'/buyer/dashboard',
+            path:'/buyer-page/dashboard',
             element:<BuyerDashBoard/>
           },
           {
-            path:'/buyer/profile',
+            path:'/buyer-page/profile',
             element:<BuyerProfile/>
           }
         ]
       },{
-        path:'/seller',
+        path:'/seller-page',
         element:<SellerRootLayout/>,
         children:[
           {
-            path:'/seller',
+            path:'/seller-page',
             element:<SellerHome/>
           },
           {
-            path:'/seller/login',
+            path:'/seller-page/login',
             element:<LoginSeller />
           },
           {
-            path:'/seller/register',
+            path:'/seller-page/register',
             element:<RegisterSeller />
           },
           {
-            path:'/seller/dashboard',
+            path:'/seller-page/dashboard',
             element:<SellerDashBoard/>
           },
           {
-            path:'/seller/profile',
+            path:'/seller-page/profile',
             element:<SellerProfile/>
           },
           {
-            path:'/seller/postRent',
+            path:'/seller-page/postRent',
             element:<PostRent/>
           },
           {
-            path:'/seller/postedRent',
+            path:'/seller-page/postedRent',
             element:<PostedRent/>
           }
         ]

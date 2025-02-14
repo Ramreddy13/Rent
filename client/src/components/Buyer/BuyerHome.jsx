@@ -14,10 +14,10 @@ function BuyerHome() {
           Sign up or log in to get started!
         </p>
         <div className="button-group">
-          <button className="buyer-button register" onClick={() => navigate('/buyer/register')}>
+          <button className="buyer-button register" onClick={() => navigate('/buyer-page/register')}>
             Register
           </button>
-          <button className="buyer-button login" onClick={() => navigate('/buyer/login')}>
+          <button className="buyer-button login" onClick={() => navigate('/buyer-page/login')}>
             Login
           </button>
         </div>
