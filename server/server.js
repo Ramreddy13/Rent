@@ -1,12 +1,17 @@
 const express=require('express');
 const cors = require('cors');
 const app=express();
-const port=5000;
 const mclient=require("mongodb").MongoClient
 app.use(express.json());
-app.use(cors());
+app.use(cors(
+    {
+        origin:["http://localhost:3000","http://RentNest"],
+        methods:["GET","POST","DELETE"],
+        credentials:true
+    }
+));
 
-mclient.connect('mongodb://localhost:27017/')
+mclient.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
 .then(dbref=>{
     //get database obj
     let dbobj=dbref.db('rent')
@@ -27,4 +32,6 @@ app.use('/buyer',buyer)
 const seller=require("./routes/sellerRoute")
 app.use('/seller',seller)
 
-app.listen(port);
+app.listen(process.env.PORT,()=>{
+    console.log("server started")
+});
